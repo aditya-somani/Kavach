@@ -1,0 +1,22 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Generated artefacts (regenerate with scripts/make_test_calls.py)
+data/audio/
+data/kavach.db
+data/results/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
