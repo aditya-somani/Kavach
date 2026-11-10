@@ -98,7 +98,9 @@ class CallSession:
         self._last_llm_at = 0.0
         self._alerted_once = False
         self._alerts_spoken = 0
+        self._alert_task: asyncio.Task[None] | None = None
         self._max_risk = 0.0
+        self.started_at = 0.0
         self._reasons: list[str] = []
         self._segments: list[str] = []
         self._running = False
@@ -119,9 +121,15 @@ class CallSession:
     def running(self) -> bool:
         return self._running
 
+    async def wait(self) -> None:
+        """Block until the call finishes. Used by the eval harness."""
+        if self._task is not None:
+            await asyncio.gather(self._task, return_exceptions=True)
+
     # -- main loop --------------------------------------------------------
     async def _run(self) -> None:
         self._running = True
+        self.started_at = time.time()
         await self._store.create_call(self.call_id, self._source.name)
         await self._publish("status", {"state": "running", "source": self._source.name})
 
@@ -136,6 +144,8 @@ class CallSession:
         finally:
             self._running = False
             await self._cancel_llm()
+            if self._alert_task is not None:
+                await asyncio.gather(self._alert_task, return_exceptions=True)
             summary = self._summary()
             await self._store.finish_call(
                 self.call_id, self._max_risk, self._alerted_once, summary, self._reasons
@@ -167,23 +177,23 @@ class CallSession:
             },
         )
 
-        # Rules run synchronously on every segment: instant meter movement.
-        self._apply(evaluate(self._window.text()))
+        # Rules run on every segment: instant meter movement, no network wait.
+        await self._apply(evaluate(self._window.text()))
         self._maybe_schedule_llm()
 
     # -- scoring ----------------------------------------------------------
-    def _apply(self, rules: Any) -> RiskState:
+    async def _apply(self, rules: Any) -> RiskState:
         state = self._scorer.update(rules, self._last_llm)
         self._max_risk = max(self._max_risk, state.score)
         if state.reason_en and state.reason_en not in self._reasons:
             self._reasons.append(state.reason_en)
 
-        asyncio.create_task(
-            self._publish("risk", state.to_dict())
-        )
+        await self._publish("risk", state.to_dict())
         if state.alerted and not self._alerted_once:
             self._alerted_once = True
-            asyncio.create_task(self._raise_alert(state))
+            self._alert_task = asyncio.create_task(
+                self._raise_alert(state), name="alert"
+            )
         return state
 
     def _maybe_schedule_llm(self) -> None:
@@ -215,7 +225,7 @@ class CallSession:
             )
         else:
             log.debug("LLM unavailable: %s", reading.error)
-        self._apply(evaluate(self._window.text()))
+        await self._apply(evaluate(self._window.text()))
 
     async def _cancel_llm(self) -> None:
         if self._llm_task is not None and not self._llm_task.done():

@@ -1,0 +1,195 @@
+[
+  {
+    "id": "scam_digital_arrest",
+    "label": "scam",
+    "scam_type": "digital arrest",
+    "turns": [
+      { "speaker": "caller", "text": "नमस्ते, मैं CBI मुंबई से इंस्पेक्टर शर्मा बोल रहा हूँ। आपके आधार कार्ड पर एक parcel मिला है जिसमें ड्रग्स हैं।" },
+      { "speaker": "receiver", "text": "क्या? मैंने तो कोई parcel नहीं भेजा।" },
+      { "speaker": "caller", "text": "आपका नाम money laundering case में आ रहा है। अभी गिरफ्तारी वारंट जारी होने वाला है।" },
+      { "speaker": "receiver", "text": "हे भगवान, मैं क्या करूँ?" },
+      { "speaker": "caller", "text": "घबराइए मत, मैं आपकी मदद कर सकता हूँ। लेकिन यह बात किसी को मत बताइए, family को भी नहीं।" },
+      { "speaker": "receiver", "text": "ठीक है, किसी को नहीं बताऊँगा।" },
+      { "speaker": "caller", "text": "लाइन पर रहिए और फोन मत काटिए। verification के लिए पचास हज़ार रुपये इस account में transfer कीजिए।" },
+      { "speaker": "receiver", "text": "इतने पैसे कैसे भेजूँ?" },
+      { "speaker": "caller", "text": "UPI से अभी भेज दीजिए, दस मिनट में। नहीं तो पुलिस आपके घर आएगी।" }
+    ]
+  },
+  {
+    "id": "scam_fake_kyc",
+    "label": "scam",
+    "scam_type": "fake KYC",
+    "turns": [
+      { "speaker": "caller", "text": "Sir, मैं आपके bank की fraud department से बोल रहा हूँ। आपका KYC expire हो गया है।" },
+      { "speaker": "receiver", "text": "अच्छा? मुझे तो कोई message नहीं आया।" },
+      { "speaker": "caller", "text": "आपका account कल बंद हो जाएगा। आपको अभी verification करना होगा।" },
+      { "speaker": "receiver", "text": "कैसे करूँ?" },
+      { "speaker": "caller", "text": "मैं आपको OTP भेज रहा हूँ, वो OTP मुझे बता दीजिए।" },
+      { "speaker": "receiver", "text": "OTP तो किसी को नहीं बताना चाहिए ना?" },
+      { "speaker": "caller", "text": "Sir, मैं bank से हूँ, मुझे बता सकते हैं। जल्दी कीजिए, account freeze होने वाला है।" },
+      { "speaker": "receiver", "text": "ठीक है, OTP आ गया है।" },
+      { "speaker": "caller", "text": "बता दीजिए, चार digit।" }
+    ]
+  },
+  {
+    "id": "scam_fake_parcel",
+    "label": "scam",
+    "scam_type": "fake parcel",
+    "turns": [
+      { "speaker": "caller", "text": "Hello, मैं courier company से बोल रहा हूँ। आपका parcel customs में रुका है।" },
+      { "speaker": "receiver", "text": "कौन सा parcel?" },
+      { "speaker": "caller", "text": "इसमें illegal items मिले हैं। customs officer आपसे बात करना चाहता है।" },
+      { "speaker": "receiver", "text": "मैंने कुछ गलत नहीं मंगाया।" },
+      { "speaker": "caller", "text": "तो clearance fee आठ हज़ार रुपये जमा करनी होगी, वरना FIR हो जाएगी।" },
+      { "speaker": "receiver", "text": "FIR?" },
+      { "speaker": "caller", "text": "हाँ, आपको arrest किया जा सकता है। किसी को मत बताइए, सीधे payment कीजिए।" },
+      { "speaker": "receiver", "text": "कहाँ भेजूँ?" },
+      { "speaker": "caller", "text": "मैं UPI ID भेज रहा हूँ, अभी transfer कर दीजिए।" }
+    ]
+  },
+  {
+    "id": "scam_remote_access",
+    "label": "scam",
+    "scam_type": "remote-access support",
+    "turns": [
+      { "speaker": "caller", "text": "Sir, मैं Microsoft support से हूँ। आपके computer में virus है।" },
+      { "speaker": "receiver", "text": "मेरा computer ठीक चल रहा है।" },
+      { "speaker": "caller", "text": "नहीं sir, आपका bank data leak हो रहा है। मैं remote access से ठीक कर दूँगा।" },
+      { "speaker": "receiver", "text": "कैसे?" },
+      { "speaker": "caller", "text": "AnyDesk install कीजिए और code बता दीजिए।" },
+      { "speaker": "receiver", "text": "AnyDesk? वो क्या है?" },
+      { "speaker": "caller", "text": "बस एक app है, अभी download कीजिए। जल्दी कीजिए वरना सारा पैसा चला जाएगा।" },
+      { "speaker": "receiver", "text": "ठीक है, install कर रहा हूँ।" },
+      { "speaker": "caller", "text": "अब screen share कीजिए, मैं आपका net banking देख लेता हूँ।" }
+    ]
+  },
+  {
+    "id": "scam_fake_prize",
+    "label": "scam",
+    "scam_type": "fake prize",
+    "turns": [
+      { "speaker": "caller", "text": "बधाई हो! आपने पच्चीस लाख का lottery जीता है।" },
+      { "speaker": "receiver", "text": "सच में? मैंने तो कुछ नहीं भरा।" },
+      { "speaker": "caller", "text": "आपका number lucky draw में आया है। prize पाने के लिए processing fee पंद्रह हज़ार रुपये जमा करनी होगी।" },
+      { "speaker": "receiver", "text": "पहले पैसे दूँ?" },
+      { "speaker": "caller", "text": "हाँ, fee के बाद ही amount transfer होगा। आज ही कर दीजिए, offer सिर्फ दो घंटे के लिए है।" },
+      { "speaker": "receiver", "text": "किसे भेजूँ?" },
+      { "speaker": "caller", "text": "मैं account number भेजता हूँ, UPI से भेज दीजिए। किसी को बताने की जरूरत नहीं।" }
+    ]
+  },
+  {
+    "id": "scam_relative_emergency",
+    "label": "scam",
+    "scam_type": "fake relative emergency",
+    "turns": [
+      { "speaker": "caller", "text": "मामा जी, मैं राहुल बोल रहा हूँ। मेरा accident हो गया है।" },
+      { "speaker": "receiver", "text": "राहुल? तुम्हारी आवाज अलग लग रही है।" },
+      { "speaker": "caller", "text": "गला खराब है, hospital में हूँ। operation के लिए चालीस हज़ार रुपये चाहिए।" },
+      { "speaker": "receiver", "text": "मैं तुम्हारे पापा को बताता हूँ।" },
+      { "speaker": "caller", "text": "नहीं नहीं, उन्हें मत बताइए, वो घबरा जाएंगे। आप सीधे इस account में पैसे भेज दीजिए।" },
+      { "speaker": "receiver", "text": "डॉक्टर से बात करा दो।" },
+      { "speaker": "caller", "text": "अभी नहीं, जल्दी भेजिए वरना देर हो जाएगी।" }
+    ]
+  },
+  {
+    "id": "scam_fake_refund",
+    "label": "scam",
+    "scam_type": "fake refund",
+    "turns": [
+      { "speaker": "caller", "text": "Sir, आपका previous loan का refund बारह हज़ार रुपये pending है।" },
+      { "speaker": "receiver", "text": "अच्छा, कैसे मिलेगा?" },
+      { "speaker": "caller", "text": "मैं refund department से हूँ। आपको पहले दो हज़ार रुपये verification charge देना होगा।" },
+      { "speaker": "receiver", "text": "refund के लिए पैसे देने हैं?" },
+      { "speaker": "caller", "text": "हाँ sir, यह process है। refund चौबीस घंटे में आ जाएगा।" },
+      { "speaker": "receiver", "text": "अगर नहीं आया तो?" },
+      { "speaker": "caller", "text": "आएगा, भरोसा कीजिए। आपका card number और CVV बता दीजिए।" }
+    ]
+  },
+  {
+    "id": "legit_bank_emi",
+    "label": "legit",
+    "scam_type": "bank EMI reminder",
+    "turns": [
+      { "speaker": "caller", "text": "नमस्ते, मैं HDFC bank से बोल रही हूँ। आपकी home loan की EMI कल due है।" },
+      { "speaker": "receiver", "text": "अच्छा, कितनी है?" },
+      { "speaker": "caller", "text": "बारह हज़ार पाँच सौ रुपये। आप auto-debit से भुगतान कर सकते हैं।" },
+      { "speaker": "receiver", "text": "ठीक है, मैं check कर लेता हूँ।" },
+      { "speaker": "caller", "text": "जी, कोई OTP या card number नहीं मांगा जा रहा है, बस reminder है। धन्यवाद।" }
+    ]
+  },
+  {
+    "id": "legit_delivery",
+    "label": "legit",
+    "scam_type": "delivery agent",
+    "turns": [
+      { "speaker": "caller", "text": "Hello sir, आपका parcel आया है। मैं delivery agent बोल रहा हूँ।" },
+      { "speaker": "receiver", "text": "कहाँ हैं आप?" },
+      { "speaker": "caller", "text": "मैं नीचे gate पर हूँ। आपको OTP मिला होगा, वो बता दीजिए ताकि मैं parcel दे सकूँ।" },
+      { "speaker": "receiver", "text": "हाँ, एक मिनट।" },
+      { "speaker": "caller", "text": "धन्यवाद sir, आपका parcel मिल गया।" }
+    ]
+  },
+  {
+    "id": "legit_doctor",
+    "label": "legit",
+    "scam_type": "doctor appointment",
+    "turns": [
+      { "speaker": "caller", "text": "नमस्ते, मैं Dr. Mehta की clinic से बोल रही हूँ। आपका appointment कल शाम पाँच बजे है।" },
+      { "speaker": "receiver", "text": "हाँ, याद है।" },
+      { "speaker": "caller", "text": "आपको आना है या reschedule करना है?" },
+      { "speaker": "receiver", "text": "मैं आ जाऊँगा।" },
+      { "speaker": "caller", "text": "ठीक है, धन्यवाद।" }
+    ]
+  },
+  {
+    "id": "legit_relative_help",
+    "label": "legit",
+    "scam_type": "relative genuinely asking for help",
+    "turns": [
+      { "speaker": "caller", "text": "भाई, मैं सुनील बोल रहा हूँ। मेरी car highway पर खराब हो गई है।" },
+      { "speaker": "receiver", "text": "अरे, कहाँ हो?" },
+      { "speaker": "caller", "text": "mechanic बुला लिया है, उसने पाँच हज़ार बोले हैं।" },
+      { "speaker": "receiver", "text": "पैसे चाहिए?" },
+      { "speaker": "caller", "text": "हाँ, अगर आपके पास हों तो भेज दो, मैं कल लौटा दूँगा।" },
+      { "speaker": "receiver", "text": "ठीक है, भेज देता हूँ।" },
+      { "speaker": "caller", "text": "धन्यवाद भाई।" }
+    ]
+  },
+  {
+    "id": "legit_electricity_bill",
+    "label": "legit",
+    "scam_type": "electricity bill",
+    "turns": [
+      { "speaker": "caller", "text": "Sir, मैं electricity board से बोल रहा हूँ। आपका bill overdue है।" },
+      { "speaker": "receiver", "text": "कितना?" },
+      { "speaker": "caller", "text": "दो हज़ार तीन सौ रुपये। आप online pay कर सकते हैं।" },
+      { "speaker": "receiver", "text": "ठीक है, app से कर दूँगा।" },
+      { "speaker": "caller", "text": "जी, धन्यवाद।" }
+    ]
+  },
+  {
+    "id": "legit_insurance_renewal",
+    "label": "legit",
+    "scam_type": "insurance renewal",
+    "turns": [
+      { "speaker": "caller", "text": "नमस्ते, आपकी health insurance policy अगले महीने renew होनी है।" },
+      { "speaker": "receiver", "text": "premium कितना है?" },
+      { "speaker": "caller", "text": "अठारह हज़ार रुपये। आप चाहें तो online भुगतान कर सकते हैं।" },
+      { "speaker": "receiver", "text": "मैं agent से बात कर लूँगा।" },
+      { "speaker": "caller", "text": "बिलकुल, धन्यवाद।" }
+    ]
+  },
+  {
+    "id": "legit_bank_kyc",
+    "label": "legit",
+    "scam_type": "bank KYC update",
+    "turns": [
+      { "speaker": "caller", "text": "Sir, मैं bank से बोल रहा हूँ। आपका KYC update करना है।" },
+      { "speaker": "receiver", "text": "क्या चाहिए?" },
+      { "speaker": "caller", "text": "आप branch में आकर Aadhaar की copy दे दीजिए।" },
+      { "speaker": "receiver", "text": "कब तक?" },
+      { "speaker": "caller", "text": "महीने के अंत तक। कोई जल्दी नहीं है।" },
+      { "speaker": "receiver", "text": "ठीक है, आ जाऊँगा।" }
+    ]
+  }
+]
