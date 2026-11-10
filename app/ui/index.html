@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kavach — scam-call shield</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div id="alert-banner" class="alert-banner hidden" role="alert" aria-live="assertive">
+    <div class="alert-inner">
+      <div class="alert-mark">!</div>
+      <div class="alert-copy">
+        <div class="alert-title">सावधान — यह स्कैम हो सकता है</div>
+        <div class="alert-sub" id="alert-sub">कोई ओटीपी या पैसे न भेजें। फोन काट दीजिए।</div>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">क</div>
+      <div>
+        <h1>Kavach</h1>
+        <p>Real-time scam-call shield</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span id="conn" class="pill">connecting</span>
+      <span id="source-label" class="muted">no call</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel transcript-panel">
+      <div class="panel-head">
+        <h2>Live transcript</h2>
+        <span class="muted" id="segment-count">0 segments</span>
+      </div>
+      <div id="transcript" class="transcript">
+        <div class="empty">Start a call to see the transcript.</div>
+      </div>
+    </section>
+
+    <aside class="panel side-panel">
+      <div class="panel-head"><h2>Risk</h2></div>
+      <div class="score-block">
+        <div class="score" id="score">0</div>
+        <div class="score-label" id="score-label">calm</div>
+        <div class="meter"><div class="meter-fill" id="meter-fill"></div></div>
+      </div>
+
+      <div class="panel-head"><h2>Signals</h2></div>
+      <ul class="signals" id="signals"></ul>
+
+      <div class="panel-head"><h2>Why</h2></div>
+      <div class="reason" id="reason">No risk signals yet.</div>
+    </aside>
+  </main>
+
+  <footer class="controls">
+    <div class="control-group">
+      <label for="demo-select">Demo call</label>
+      <select id="demo-select"></select>
+      <button id="btn-demo">Play</button>
+    </div>
+    <div class="control-group">
+      <button id="btn-mic" class="primary">Start microphone</button>
+      <button id="btn-stop" class="ghost" disabled>Stop</button>
+    </div>
+    <a class="link" href="/family" target="_blank" rel="noopener">Family dashboard →</a>
+  </footer>
+
+  <audio id="warning-audio" preload="auto"></audio>
+  <script src="/static/app.js"></script>
+</body>
+</html>
